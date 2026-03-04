@@ -1,22 +1,22 @@
 services:
   postgres:
     image: postgres:16
-    container_name: tollbooth-postgres
+    container_name: nope-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: tollbooth
+      POSTGRES_DB: nope
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
   backend:
     image: node:20
-    container_name: tollbooth-backend
+    container_name: nope-backend
     working_dir: /app
     environment:
       PORT: 4000
-      DATABASE_URL: postgres://postgres:postgres@postgres:5432/tollbooth
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/nope
       JWT_SECRET: change_me
     volumes:
       - ./backend:/app

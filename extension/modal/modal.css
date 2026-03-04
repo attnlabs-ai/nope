@@ -26,7 +26,7 @@
   to { opacity: 0; transform: translateY(-50px); }
 }
 
-.tb-overlay {
+.nope-overlay {
   position: fixed;
   inset: 0;
   background: rgba(28, 25, 23, 0.7);
@@ -41,7 +41,7 @@
   padding: 16px;
 }
 
-.tb-card {
+.nope-card {
   background: #FFFFFF;
   width: min(400px, 92vw);
   border-radius: 24px;
@@ -53,14 +53,14 @@
   position: relative;
 }
 
-.tb-mascot div {
+.nope-mascot div {
   font-size: 72px;
   padding: 28px 20px 8px;
   line-height: 1;
   animation: tbBounce 1.8s ease-in-out infinite;
 }
 
-.tb-category-pill {
+.nope-category-pill {
   display: inline-block;
   background: #FEF3C7;
   border: 1px solid #FDE68A;
@@ -74,7 +74,7 @@
   letter-spacing: 0.5px;
 }
 
-.tb-headline {
+.nope-headline {
   font-size: 24px;
   font-weight: 800;
   color: #1C1917;
@@ -82,14 +82,14 @@
   line-height: 1.25;
 }
 
-.tb-subtext {
+.nope-subtext {
   font-size: 14px;
   color: #78716C;
   padding: 8px 28px 0;
   line-height: 1.5;
 }
 
-.tb-coin-box {
+.nope-coin-box {
   background: #FEF3C7;
   border: 1px solid #FDE68A;
   border-radius: 12px;
@@ -101,14 +101,14 @@
   font-weight: 700;
 }
 
-.tb-actions {
+.nope-actions {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.tb-btn-block {
+.nope-btn-block {
   background: #10B981;
   color: white;
   padding: 16px;
@@ -122,12 +122,12 @@
   width: 100%;
 }
 
-.tb-btn-block:hover {
+.nope-btn-block:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
 }
 
-.tb-btn-cooldown {
+.nope-btn-cooldown {
   background: white;
   border: 2px solid #F59E0B;
   color: #D97706;
@@ -138,7 +138,7 @@
   width: 100%;
 }
 
-.tb-btn-continue {
+.nope-btn-continue {
   background: none;
   border: none;
   color: #A8A29E;
@@ -147,7 +147,7 @@
   cursor: pointer;
 }
 
-.tb-streak-bar {
+.nope-streak-bar {
   background: #FEF3C7;
   padding: 12px 20px;
   text-align: center;
@@ -156,7 +156,7 @@
   font-weight: 600;
 }
 
-.tb-coin-float {
+.nope-coin-float {
   position: absolute;
   left: 50%;
   top: 24px;

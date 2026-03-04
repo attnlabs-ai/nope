@@ -1,6 +1,6 @@
-# Tollbooth MVP
+# Nope MVP
 
-Tollbooth is a Chrome extension + backend + dashboard MVP that adds real-time financial friction at checkout for user-selected categories.
+Nope is a Chrome extension + backend + dashboard MVP that adds real-time financial friction at checkout for user-selected categories.
 
 ## Repo Structure
 - `extension/` Chrome extension (MV3)
@@ -16,7 +16,7 @@ docker compose up --build
 
 Initialize DB schema:
 ```bash
-psql postgres://postgres:postgres@localhost:5432/tollbooth -f backend/db/schema.sql
+psql postgres://postgres:postgres@localhost:5432/nope -f backend/db/schema.sql
 ```
 
 Backend runs on `http://localhost:4000`.

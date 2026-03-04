@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (_req, res) => {
-  res.json({ status: "ok", service: "tollbooth-backend" });
+  res.json({ status: "ok", service: "nope-backend" });
 });
 
 app.use("/api/auth", authRoutes);
@@ -32,5 +32,5 @@ app.use((err, _req, res, _next) => {
 });
 
 app.listen(port, () => {
-  console.log(`Tollbooth backend listening on ${port}`);
+  console.log(`Nope backend listening on ${port}`);
 });

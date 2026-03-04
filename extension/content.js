@@ -41,7 +41,7 @@
   }
 
   function collectBreadcrumbText() {
-    const selectors = window.TollboothCategories?.breadcrumbSelectors || [];
+    const selectors = window.NopeCategories?.breadcrumbSelectors || [];
     for (const selector of selectors) {
       const el = document.querySelector(selector);
       if (!el) continue;
@@ -52,7 +52,7 @@
   }
 
   function detectCategory() {
-    const cats = window.TollboothCategories;
+    const cats = window.NopeCategories;
     if (!cats) return null;
 
     const domain = normalizeDomain(location.hostname);
@@ -233,7 +233,7 @@
     if (isCheckoutUrl(location.href)) {
       if (!activeCategory) activeCategory = detectCategory();
       if (!activeCategory) return;
-      const event = new Event("tollbooth-url", { bubbles: false });
+      const event = new Event("nope-url", { bubbles: false });
       interceptIfNeeded(event, "url");
     }
   });
@@ -241,7 +241,7 @@
   observer.observe(document.documentElement, { childList: true, subtree: true });
 
   if (isCheckoutUrl(location.href)) {
-    const event = new Event("tollbooth-url", { bubbles: false });
+    const event = new Event("nope-url", { bubbles: false });
     interceptIfNeeded(event, "url");
   }
 })();

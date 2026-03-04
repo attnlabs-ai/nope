@@ -72,7 +72,7 @@ export default function Dashboard() {
   }
 
   function getLevel(blocks) {
-    if (blocks >= 100) return { level: 5, title: "Tollbooth Legend", emoji: "🏆", next: Infinity };
+    if (blocks >= 100) return { level: 5, title: "Nope Legend", emoji: "🏆", next: Infinity };
     if (blocks >= 51) return { level: 4, title: "Shopping Sensei", emoji: "🧘", next: 100 };
     if (blocks >= 21) return { level: 3, title: "Impulse Ninja", emoji: "🥷", next: 51 };
     if (blocks >= 6) return { level: 2, title: "Getting There", emoji: "💪", next: 21 };

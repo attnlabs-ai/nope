@@ -12,7 +12,7 @@ export function createModal({ html, cssText, data, onAction }) {
     if (el) el.textContent = value;
   }
 
-  const cats = window.TollboothCategories;
+  const cats = window.NopeCategories;
   const category = data.category || "default";
   const emoji = cats ? cats.getCategoryEmoji(category) : "🛑";
   const headline = cats ? cats.getRandomMessage(category) : "You got this.";
@@ -28,10 +28,10 @@ export function createModal({ html, cssText, data, onAction }) {
     const action = target.getAttribute("data-action");
 
     if (action === "block") {
-      const card = overlay.querySelector(".tb-card");
+      const card = overlay.querySelector(".nope-card");
       if (card) {
         const float = document.createElement("div");
-        float.className = "tb-coin-float";
+        float.className = "nope-coin-float";
         float.textContent = "+15 🪙";
         card.appendChild(float);
       }

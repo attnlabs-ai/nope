@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div>
       <nav className="nav">
-        <div className="brand">Tollbooth</div>
+        <div className="brand">Nope</div>
         <Link to="/">Dashboard</Link>
         <Link to="/settings">Settings</Link>
         <Link to="/onboarding">Onboarding</Link>

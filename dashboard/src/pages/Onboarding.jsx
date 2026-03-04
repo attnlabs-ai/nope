@@ -174,7 +174,7 @@ export default function Onboarding() {
           <div className="onboard-actions">
             <div className="celebration-emoji">🎉</div>
             <div className="onboard-title">You're officially protected.</div>
-            <div className="onboard-sub">Tollbooth is watching your back.</div>
+            <div className="onboard-sub">Nope is watching your back.</div>
             <div className="coin-bonus">🪙 50 bonus coins for joining!</div>
             <button
               className="btn btn-primary"

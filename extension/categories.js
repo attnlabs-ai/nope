@@ -147,7 +147,7 @@
     return categoryEmoji[category] || categoryEmoji.default;
   }
 
-  window.TollboothCategories = {
+  window.NopeCategories = {
     domains,
     keywords,
     urlPatterns,
