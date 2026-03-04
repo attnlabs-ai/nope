@@ -12,35 +12,35 @@ export function createModal({ html, cssText, data, onAction }) {
     if (el) el.textContent = value;
   }
 
-  // Get funny message + emoji from categories (injected by content script)
   const cats = window.TollboothCategories;
   const category = data.category || "default";
   const emoji = cats ? cats.getCategoryEmoji(category) : "🛑";
-  const headline = cats ? cats.getRandomMessage(category) : "Pump the brakes, champ.";
+  const headline = cats ? cats.getRandomMessage(category) : "You got this.";
 
   setText("[data-tb='emoji']", emoji);
   setText("[data-tb='headline']", headline);
-  setText("[data-tb='category']", category.replace(/_/g, " "));
-  setText("[data-tb='domain']", data.domain || "this site");
-  setText("[data-tb='friction']", String(data.frictionPercent || 100));
-  setText("[data-tb='count']", String(data.weeklyBlockCount || 0));
-
-  // Show friction note if mode is friction
-  const frictionNote = overlay.querySelector(".tb-friction-note");
-  if (frictionNote && data.mode === "friction") {
-    frictionNote.classList.add("visible");
-  }
-
-  // Hide cooldown button if not in cooldown mode
-  const cooldownBtn = overlay.querySelector("[data-action='cooldown']");
-  if (cooldownBtn && data.mode === "block") {
-    cooldownBtn.style.display = "none";
-  }
+  setText("[data-tb='category-pill']", `${emoji} ${category.replace(/_/g, " ")}`);
+  setText("[data-tb='streak']", `🔥 ${data.streakDays || 0}-day streak — keep going!`);
 
   overlay.addEventListener("click", (event) => {
     const target = event.target.closest("[data-action]");
     if (!target) return;
     const action = target.getAttribute("data-action");
+
+    if (action === "block") {
+      const card = overlay.querySelector(".tb-card");
+      if (card) {
+        const float = document.createElement("div");
+        float.className = "tb-coin-float";
+        float.textContent = "+15 🪙";
+        card.appendChild(float);
+      }
+      setTimeout(() => {
+        onAction?.(action);
+      }, 800);
+      return;
+    }
+
     if (action) onAction?.(action);
   });
 
