@@ -1,5 +1,7 @@
 # Nope MVP
 
+> New here, person or AI agent? Read [START-HERE.md](START-HERE.md) first.
+
 Nope is a Chrome extension + backend + dashboard MVP that adds real-time financial friction at checkout for user-selected categories.
 
 ## Repo Structure
